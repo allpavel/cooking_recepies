@@ -8,6 +8,7 @@ export default function Navbar() {
             <Link to='/recipes' className='navbar_item' activeClassName='active'>Recipe</Link>
             <Link to='/tags' className='navbar_item' activeClassName='active'>Tags</Link>
             <Link to='/about' className='navbar_item' activeClassName='active'>About</Link>
+            <Link to='/contact' className='navbar_item' activeClassName='active'>Contact</Link>
         </nav>
     )
 };
