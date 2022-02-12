@@ -1,210 +1,260 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* BASIC */
 :root {
-  --font-color-main: #868b8e;
-  --navbar-and-footer-color-main: #eeede7;
+    --font-color-main: #868b8e;
+    --navbar-and-footer-color-main: #eeede7;
 
-  --font-color-hover: #eeede7;
-  --navbar-and-footer-color-hover: #b9b7bd;
+    --font-color-hover: #eeede7;
+    --navbar-and-footer-color-hover: #b9b7bd;
 
-  --active-menu-color: #868b8e;
+    --active-menu-color: #868b8e;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .page_wrapper {
-  font-family: "Montserrat";
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Montserrat';
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* NAVIGATION */
 
 nav {
-  background-color: var(--navbar-and-footer-color-main);
+    background-color: var(--navbar-and-footer-color-main);
 }
 
 .navbar_list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 0;
-  margin: 0;
-  height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 3em;
+    position: relative;
+}
+
+.logo img {
+    width: 7rem;
+    object-fit: contain;
+    
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0em 2em;
-  height: 100%;
-  width: 8em;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-decoration: none;
-  color: var(--font-color-main);
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 2em;
+    height: 100%;
+    width: 8em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--font-color-main);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .navbar_item a {
-  color: var(--font-color-main);
-  text-decoration: none;
-  height: auto;
+    color: var(--font-color-main);
+    text-decoration: none;
+    height: auto;
 }
 
 .navbar_item:hover {
-  background-color: var(--navbar-and-footer-color-hover);
-  border-bottom: 3px solid var(--font-color-main);
+    background-color: var(--navbar-and-footer-color-hover);
+    border-bottom: 3px solid var(--font-color-main);
 }
 
 .navbar_item:hover a {
-  color: var(--font-color-hover);
-  text-decoration: none;
+    color: var(--font-color-hover);
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
 }
 
 .active {
-  background-color: var(--active-menu-color);
-  color: var(--font-color-hover);
-  border-bottom: 3px solid black;
+    background-color: var(--active-menu-color);
+    color: var(--font-color-hover);
+    border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 1100px) {
+    .logo {
+        width: 5rem;        
+    }
+    .navbar_item {
+        font-size: 0.8rem;
+        width: 6em;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .navbar_list {
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 3.6em;
+        background-color: var(--navbar-and-footer-color-main);
+        color: var(--font-color-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  color: var(--font-color-main);
-  margin-top: auto;
-  background-color: var(--navbar-and-footer-color-main);
+    text-align: center;
+    color: var(--font-color-main);
+    margin-top: auto;
+    background-color: var(--navbar-and-footer-color-main);
 }
 
 /* ERROR PAGE */
 .error-page {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .error-page section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .error-page h1 {
-  margin: 0;
-  font-size: 6rem;
+    margin: 0;
+    font-size: 6rem;
 }
 
 .error-page h3 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 /* CONTACT PAGE */
 .contact-page {
-  display: flex;
-  margin-top: 2rem;
+    display: flex;
+    margin-top: 2rem;
 }
 
+/* TEXT ON CONTACT PAGE */
+
 .text-container {
-  flex: 50%;
-  padding: 0 3em;
+    flex: 50%;
+    padding: 0 3em;
 }
 
 /* FORM */
 .form-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 3em;
-  border-left: 5px solid var(--navbar-and-footer-color-main);
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3em;
+    border-left: 5px solid var(--navbar-and-footer-color-main);
+    width: 50%;
 }
 
 .inputbox {
-  position: relative;
-  height: 3rem;
-  min-width: 250px;
-  margin-bottom: 2rem;
+    position: relative;
+    height: 3rem;
+    min-width: 250px;
+    margin-bottom: 2rem;
 }
 
 .inputbox input {
-  width: 50%;
-  min-width: 200px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  outline: none;
-  background: none;
-  border: 3px solid var(--navbar-and-footer-color-main);
-  border-radius: 5px;
-  padding: 0.5rem;
+    width: 50%;
+    min-width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    outline: none;
+    background: none;
+    border: 3px solid var(--navbar-and-footer-color-main);
+    border-radius: 5px;
+    padding: 0.5rem;
 }
 
 .inputbox label {
-  position: absolute;
-  top: 14px;
-  left: 20px;
-  font-size: 1rem;
-  padding: 0 3px;
-  background: none;
-  transition: all 0.6s ease-in;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1rem;
+    padding: 0 3px;
+    background: none;
+    transition: all 0.6s ease-in;
 }
 
 .inputbox input:hover {
-  border: 3px solid var(--navbar-and-footer-color-hover);
+    border: 3px solid var(--navbar-and-footer-color-hover);
 }
 
 .inputbox input:focus {
-  border: 3px solid var(--navbar-and-footer-color-hover);
+    border: 3px solid var(--navbar-and-footer-color-hover);
 }
 
 .inputbox input:focus ~ label,
 .inputbox input:valid ~ label {
-  transform: translateX(-13px) translateY(-20px);
-  font-size: 0.8rem;
-  background-color: white;
+    transform: translateX(-13px) translateY(-20px);
+    font-size: 0.8rem;
+    background-color: white;
 }
 
 .inputbox textarea {
-  outline: none;
-  resize: none;
-  width: 50%;
-  min-width: 200px;
-  padding: 0.5rem;
-  border: 3px solid var(--navbar-and-footer-color-main);
+    outline: none;
+    resize: none;
+    width: 50%;
+    min-width: 200px;
+    padding: 0.5rem;
+    border: 3px solid var(--navbar-and-footer-color-main);
 }
 
 .inputbox textarea + label {
-  position: absolute;
-  font-size: 0.8rem;
-  background: white;
-  top: -6px;
-  left: 10px;
+    position: absolute;
+    font-size: 0.8rem;
+    background: white;
+    top: -6px;
+    left: 10px;
 }
 
 .inputbox textarea:focus {
-  border: 3px solid var(--navbar-and-footer-color-hover);
-  
+    border: 3px solid var(--navbar-and-footer-color-hover);
 }
 
-/* .inputbox textarea:focus ~ label,
-.inputbox textarea:valid ~ label {
-  transform: translateX(-13px) translateY(-20px);
-  font-size: 0.8rem;
-  background-color: white;
-} */
-
 /* BUTTONS */
+.smallButton {
+    width: 6rem;
+    height: 2rem;
+    background-color: var(--navbar-and-footer-color-main);
+    border: 2px solid var(--navbar-and-footer-color-main);
+}
+
+.smallButton:hover {
+    background-color: var(--navbar-and-footer-color-hover);
+}
+
+.smallButton:active {
+    background-color: var(--active-menu-color);
+    color: var(--font-color-hover);
+}
