@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../components/Button/Button';
 import Layout from '../components/Layout/Layout';
 
@@ -99,7 +99,7 @@ export default function Contact() {
                                 <textarea id="message" rows={3} value={message} onChange={handeMessageChange} />
                                 <label htmlFor="message">Your Message</label>
                             </div>
-                            <Button type={'submit'} title={'Submit'} onClick={handleSubmit} />
+                            <Button type={'submit'} title={'Submit'} onClick={handleSubmit} styles={'smallButton'} />
                         </form>
                     </article>
                 </section>
