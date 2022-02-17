@@ -7,9 +7,6 @@ import logo from '../../assets/images/logo.png';
 export default function Navbar() {
     return (
         <nav className="navbar_list">
-            <Link to="/" className="logo">
-                <img src={logo} alt="logo-image" />
-            </Link>
             <div className="navbar-links">
                 <Link to="/" className="navbar_item" activeClassName="active">
                     Home
