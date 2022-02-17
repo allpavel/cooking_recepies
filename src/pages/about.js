@@ -3,11 +3,12 @@ import Layout from '../components/Layout/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
-const Wrapper = styled.section`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+const Wrapper = styled.main`
+    display: flex;
+    flex: 1 0 auto;
 
     .text-container {
+        width: 50%;
         padding: 5rem 2rem 5rem 9rem;
         font-size: 1.2rem;
     }
@@ -17,8 +18,9 @@ const Wrapper = styled.section`
     }
 
     .image-container {
-        padding: 5rem 3rem;
-        margin: auto 0;
+        width: 50%;
+        margin: 3rem 0;
+        padding: 2rem 3rem;
     }
 
     .image {
@@ -26,7 +28,7 @@ const Wrapper = styled.section`
         max-height: 100%;
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1200px) {
         .text-container {
             padding: 3rem;
             font-size: 1rem;
@@ -37,11 +39,12 @@ const Wrapper = styled.section`
         }
     }
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
 
         .image-container {
-            display: none;
+            padding-top: 0;
+            margin: 0 auto;
         }
 
         .text-container {

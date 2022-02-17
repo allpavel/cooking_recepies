@@ -7,10 +7,7 @@ const HeroImage = () => {
                 src="../../assets/images/hero.jpg"
                 alt="cooking-people"
                 placeholder="blurred"
-                layout="constrained"
-                aspectRatio={16 / 6}
-                width={1280}
-                objectFit="cover"
+                layout="fullWidth"
             />
     );
 };
