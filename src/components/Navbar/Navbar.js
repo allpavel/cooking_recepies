@@ -16,7 +16,7 @@ export default function Navbar() {
                     className="navbar_item"
                     activeClassName="active"
                 >
-                    Recipe
+                    Recipes
                 </Link>
                 <Link
                     to="/tags"

@@ -1,7 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import HeroImage from '../components/HeroImage/HeroImage';
 import Layout from '../components/Layout/Layout';
-import styled from 'styled-components';
+import AllRecipes from '../components/AllRecipes/AllRecipes';
 
 const Wrapper = styled.main`
     display: flex;
@@ -44,6 +45,7 @@ export default function Home() {
                         <h5>Food is a passion. Food is love.</h5>
                     </div>
                 </div>
+                <AllRecipes />
             </Wrapper>
         </Layout>
     );
