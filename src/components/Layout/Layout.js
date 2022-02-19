@@ -8,13 +8,12 @@ import '../../assets/css/global.css';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100vw;
     height: 100vh;
 `;
 
 export default function Layout({ children }) {
     return (
-        <Wrapper className='flex-container'>
+        <Wrapper>
             <Navbar />
             {children}
             <Footer />

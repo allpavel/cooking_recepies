@@ -1,8 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { GrMenu } from 'react-icons/gr';
-import { IconContext } from 'react-icons';
-import logo from '../../assets/images/logo.png';
 
 export default function Navbar() {
     return (
@@ -39,11 +36,6 @@ export default function Navbar() {
                 >
                     Contact
                 </Link>
-                <IconContext.Provider value={{ size: '2rem' }}>
-                    <div class="burger">
-                        <GrMenu />
-                    </div>
-                </IconContext.Provider>
             </div>
         </nav>
     );
