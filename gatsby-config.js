@@ -6,13 +6,7 @@ module.exports = {
     siteMetadata: {
         title: 'Cooking Recipes',
         description: 'Nice and clean recipes site',
-        author: '@pavelalloyarov',
-        person: { name: 'Pavel', age: 32 },
-        simpleData: ['item1', 'item2'],
-        complexData: [
-            { name: 'Pavel', age: 32 },
-            { name: 'Masha', age: 30 }
-        ]
+        author: '@pavelalloyarov'
     },
     plugins: [
         {
