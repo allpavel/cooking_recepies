@@ -98,7 +98,7 @@ const About = () => {
                         </p>
                     </article>
                     <article className="image-container">
-                        <StaticImage src="../assets/images/about.jpg" placeholder="blurred" width={600} />
+                        <StaticImage src="../assets/images/about.jpg" placeholder="blurred" width={600} alt="about-image" />
                     </article>
                 </section>
                 <section>

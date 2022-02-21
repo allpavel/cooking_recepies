@@ -4,11 +4,40 @@ import { graphql, useStaticQuery } from 'gatsby';
 import HeroImage from '../components/HeroImage/HeroImage';
 import Layout from '../components/Layout/Layout';
 import RecipesList from '../components/RecipesList/RecipesList';
+import TagsList from '../components/TagsList/TagsList';
 
 const Wrapper = styled.main`
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
+
+    section {
+        display: flex;
+    }
+
+    .tags a {
+        height: 2rem;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 1rem;
+    }
+
+    .tags p {
+        margin: 0 0.2rem 0;
+    }
+
+    .tags a:hover {
+        background-color: var(--navbar-and-footer-color-hover);
+        border: 2px solid var(--active-menu-color);
+    }
+
+    .tags a:active {
+        background-color: var(--active-menu-color);
+        color: var(--font-color-hover);
+    }
 `;
 
 const query = graphql`
@@ -37,8 +66,12 @@ export default function Home() {
     return (
         <Layout>
             <Wrapper>
+                <HeroImage />
+                <h2>You might be interested in:</h2>
                 <section>
-                    <h2>You might be interested in:</h2>
+                    <div className="tags">
+                        <TagsList recipes={recipes} />
+                    </div>
                     <RecipesList recipes={recipes} />
                 </section>
             </Wrapper>
