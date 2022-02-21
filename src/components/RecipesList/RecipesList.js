@@ -8,8 +8,16 @@ const Wrapper = styled.section`
     justify-content: center;
     flex-wrap: wrap;
 
+    
     .recipes-list-image-container {
-        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem 3rem;
+    }
+
+    p {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
     }
 
     img {
