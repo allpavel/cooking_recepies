@@ -38,6 +38,10 @@ const Wrapper = styled.main`
         background-color: var(--active-menu-color);
         color: var(--font-color-hover);
     }
+
+    .tags a:visited {
+        color: inherit;
+    }
 `;
 
 const query = graphql`
