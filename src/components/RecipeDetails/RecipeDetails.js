@@ -18,30 +18,32 @@ const Wrapper = styled.section`
         margin: 1rem 0;
     }
 
-    article span:first-child {
+    article h2 {
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 0;
         margin-bottom: 0.4rem;
     }
 `;
 
 const RecipeDetails = ({ servings, prepTime, cookingTime }) => {
     return (
-        <Wrapper>
-            <article>
-                <span>Servings:</span>
+        <Wrapper aria-label='Recipe details'>
+            <article aria-labelledby='servings'>
+                <h2 id='servings'>Servings:</h2>
                 <span>{servings}</span>
             </article>
-            <article>
-                <span>Prep Time:</span>
+            <article aria-labelledby='prepTime'>
+                <h2 id='prepTime'>Prep Time:</h2>
                 <span>{timeTransform(prepTime)}</span>
             </article>
-            <article>
-                <span>Cook Time:</span>
+            <article aria-labelledby='cookTime'>
+                <h2 id='cookTime'>Cook Time:</h2>
                 <span>{timeTransform(cookingTime)}</span>
             </article>
-            <article>
-                <span>Total time:</span>
+            <article aria-labelledby='totalTime'>
+                <h2 id='totalTime'>Total time:</h2>
                 <span>{timeTransform(prepTime + cookingTime)}</span>
             </article>
         </Wrapper>

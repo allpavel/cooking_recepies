@@ -39,9 +39,9 @@ const Wrapper = styled.section`
 
 const RecipeTags = ({ tags }) => {
     return (
-        <Wrapper>
+        <Wrapper aria-label='Tags of this recipe'>
             {tags.map((tag, index) => (
-                <Link to={`/tags/${tag.replace(/\s/g, '-')}`} key={index}>
+                <Link to={`/tags/${tag.replace(/\s/g, '-')}`} aria-label={tag} key={index}>
                     <p>{tag}</p>
                 </Link>
             ))}

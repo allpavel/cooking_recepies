@@ -64,7 +64,7 @@ const RecipeTemplate = ({
         <Layout>
             <Wrapper>
                 <h1>{title}</h1>
-                <GatsbyImage image={recipeImage} alt={title} title={title} />
+                <GatsbyImage image={recipeImage} alt={`image of ${title}`} title={title} />
                 <RecipeDetails servings={servings} cookingTime={cookingTime} prepTime={prepTime} />
                 <RecipeDescription description={description} />
                 <RecipeToolsAndIngredients tools={tools} ingredients={ingredients} />

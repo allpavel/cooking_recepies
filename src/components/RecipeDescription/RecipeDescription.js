@@ -1,7 +1,20 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.section`
+ h2 {
+     margin: 0;
+     font-size: 1.2rem;
+ }
+`;
 
 const RecipeDescription = ({ description }) => {
-    return <section>{description}</section>
-}
+    return (
+        <Wrapper aria-labelledby="description">
+            <h2 id='description'>Description:</h2>
+            <p>{description}</p>
+        </Wrapper>
+    );
+};
 
 export default RecipeDescription;
