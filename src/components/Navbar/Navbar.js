@@ -8,32 +8,16 @@ export default function Navbar() {
                 <Link to="/" className="navbar_item" activeClassName="active">
                     Home
                 </Link>
-                <Link
-                    to="/recipes"
-                    className="navbar_item"
-                    activeClassName="active"
-                >
+                <Link to="/recipes" className="navbar_item" activeClassName="active">
                     Recipes
                 </Link>
-                <Link
-                    to="/tags"
-                    className="navbar_item"
-                    activeClassName="active"
-                >
+                <Link to="/tags" className="navbar_item" activeClassName="active">
                     Tags
                 </Link>
-                <Link
-                    to="/about"
-                    className="navbar_item"
-                    activeClassName="active"
-                >
+                <Link to="/about" className="navbar_item" activeClassName="active">
                     About
                 </Link>
-                <Link
-                    to="/contact"
-                    className="navbar_item"
-                    activeClassName="active"
-                >
+                <Link to="/contact" className="navbar_item" activeClassName="active">
                     Contact
                 </Link>
             </div>

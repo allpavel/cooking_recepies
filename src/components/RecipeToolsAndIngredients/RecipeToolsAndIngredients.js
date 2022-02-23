@@ -13,24 +13,31 @@ const Wrapper = styled.section`
         margin-bottom: 0.4rem;
     }
 
-    ul {
-        margin-bottom: 0;
+    article h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0.4rem;
     }
+
+    ul {
+        margin-bottom:h3    }
 `;
 
 const RecipeToolsAndIngredients = ({ tools, ingredients }) => {
     return (
-        <Wrapper>
-            <article>
-                <span>Tools:</span>
+        <Wrapper aria-label='Lists of Tools and Ingredients'>
+            <article aria-labelledby='tools'>
+                <h2 id='tools'>Tools:</h2>
                 <ul>
                     {tools.map((tool, index) => (
                         <li key={index}>{tool}</li>
                     ))}
                 </ul>
             </article>
-            <article>
-                <span>Ingredients:</span>
+            <article aria-labelledby='ingredients'>
+                <h2 id='ingredients'>Ingredients:</h2>
                 <ul>
                     {ingredients.map((tool, index) => (
                         <li key={index}>{tool}</li>
