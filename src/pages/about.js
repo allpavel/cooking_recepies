@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/Layout/Layout';
 import RecipesList from '../components/RecipesList/RecipesList';
+import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
     display: flex;
@@ -80,6 +81,7 @@ const About = () => {
     const recipes = data.allContentfulRecipes.nodes;
     return (
         <Layout>
+            <Seo title={"About"} />
             <Wrapper>
                 <section className="flex-container">
                     <article className="text-container">

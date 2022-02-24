@@ -8,6 +8,7 @@ import RecipeToolsAndIngredients from '../../components/RecipeToolsAndIngredient
 import RecipeDescription from '../../components/RecipeDescription/RecipeDescription';
 import RecipeInstruction from '../../components/RecipeInstruction/RecipeInstruction';
 import RecipeTags from '../../components/RecipeTags/RecipeTags';
+import Seo from '../../components/SEO/SEO';
 
 const Wrapper = styled.main`
     display: flex;
@@ -62,6 +63,7 @@ const RecipeTemplate = ({
     const recipeImage = getImage(image);
     return (
         <Layout>
+            <Seo title={title} />
             <Wrapper>
                 <h1>{title}</h1>
                 <GatsbyImage image={recipeImage} alt={`image of ${title}`} title={title} />

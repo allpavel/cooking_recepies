@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 import TagsList from '../components/TagsList/TagsList';
+import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
     flex: 1 0 auto;
@@ -61,6 +62,7 @@ const Tags = ({
 }) => {
     return (
         <Layout>
+            <Seo title={"Tags"} />
             <Wrapper>
                 <TagsList recipes={recipes} />
             </Wrapper>
