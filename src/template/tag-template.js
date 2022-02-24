@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import RecipesList from '../components/RecipesList/RecipesList';
+import Seo from '../components/SEO/SEO';
 
 export const query = graphql`
     query GetRecipesByTag($tag: String) {
@@ -21,12 +22,13 @@ export const query = graphql`
 
 const TagTemplate = ({ data, pageContext }) => {
     const recipes = data.allContentfulRecipes.nodes;
+    const tagName = pageContext.tag[0].toUpperCase() + pageContext.tag.slice(1);
     return (
         <>
-        <h1>{pageContext.tag}</h1>
-        <RecipesList recipes={recipes} />
+            <Seo title={tagName} />
+            <h1>{pageContext.tag}</h1>
+            <RecipesList recipes={recipes} />
         </>
-        
     );
 };
 

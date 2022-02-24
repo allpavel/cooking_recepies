@@ -5,6 +5,7 @@ import HeroImage from '../components/HeroImage/HeroImage';
 import Layout from '../components/Layout/Layout';
 import RecipesList from '../components/RecipesList/RecipesList';
 import TagsList from '../components/TagsList/TagsList';
+import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
     display: flex;
@@ -69,6 +70,7 @@ export default function Home() {
     const recipes = data.allContentfulRecipes.nodes;
     return (
         <Layout>
+            <Seo title={'Home'} />
             <Wrapper>
                 <HeroImage />
                 <h2>You might be interested in:</h2>

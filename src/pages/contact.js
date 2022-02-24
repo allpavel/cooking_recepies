@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button/Button';
 import Layout from '../components/Layout/Layout';
+import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
     display: flex;
@@ -125,6 +126,7 @@ export default function Contact() {
 
     return (
         <Layout>
+            <Seo title={"Contact"} />
             <Wrapper>
                 <article className="text-container">
                     <h3>Want To Get In Touch</h3>

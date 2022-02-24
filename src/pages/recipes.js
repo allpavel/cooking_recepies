@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AllRecipes from '../components/AllRecipes/AllRecipes';
 import Layout from '../components/Layout/Layout';
+import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
     display: flex;
@@ -11,6 +12,7 @@ const Wrapper = styled.main`
 const Recipes = () => {
     return (
         <Layout>
+            <Seo title={"Recipes"} />
             <Wrapper>
                 <AllRecipes />
             </Wrapper>
