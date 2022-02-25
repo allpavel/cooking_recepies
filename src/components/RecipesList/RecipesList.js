@@ -33,7 +33,7 @@ const RecipesList = ({ recipes = [] }) => {
                 const imageItem = getImage(recipe.image);
                 return (
                     <article key={recipe.id} className="recipes-list-image-container">
-                        <Link to={`/recipes/${recipe.title.toLowerCase().replace(/\s/g, '-')}`}>
+                        <Link to={`/recipes/${recipe.title.toLowerCase().replace(/\s/g, '-')}/`}>
                             <GatsbyImage image={imageItem} alt={recipe.title} />
                             <p>{recipe.title}</p>
                         </Link>
