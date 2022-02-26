@@ -7,7 +7,7 @@ const TagsList = ({ recipes }) => {
     return (
         <>
             {tags.map(tag => (
-                <Link to={`/tags/${tag[0].replace(/\s/g, '-')}`} key={tag[0]}>
+                <Link to={`/tags/${tag[0].replace(/\s/g, '-')}/`} key={tag[0]}>
                     <p>{tag[0]}</p>
                     <p>({tag[1]})</p>
                 </Link>

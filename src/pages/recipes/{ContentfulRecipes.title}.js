@@ -19,7 +19,7 @@ const Wrapper = styled.main`
     margin: 0 auto;
 
     img {
-        width: 50vw;
+        width: 20vw;
         height: auto;
     }
 `;
