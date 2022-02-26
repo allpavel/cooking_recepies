@@ -3,9 +3,13 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import styled, { createGlobalStyle } from 'styled-components';
 import '../../assets/css/normalize.css';
-import '../../assets/css/global.css';
+import MontserratFont from '../../assets/fonts/Montserrat-Light.woff2';
 
 const Global = createGlobalStyle`
+    @font-face {
+        font-family: 'Montserrat';
+        src: url(${MontserratFont}) format('woff2');
+    }
     :root {
         --font-color-main: #60615f;
         --navbar-and-footer-color-main: #eeede7;
@@ -25,6 +29,7 @@ const Global = createGlobalStyle`
         font-size: 16px;
         margin: 0;
         font-family: 'Montserrat', sans-serif;
+        line-height: 140%;
     }
 `;
 
