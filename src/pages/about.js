@@ -81,7 +81,7 @@ const About = () => {
     const recipes = data.allContentfulRecipes.nodes;
     return (
         <Layout>
-            <Seo title={"About"} />
+            <Seo title={'About'} />
             <Wrapper>
                 <section className="flex-container">
                     <article className="text-container">
@@ -100,13 +100,15 @@ const About = () => {
                         </p>
                     </article>
                     <article className="image-container">
-                        <StaticImage src="../assets/images/about.jpg" placeholder="blurred" width={600} alt="about-image" />
+                        <StaticImage
+                            src="../assets/images/about.jpg"
+                            placeholder="blurred"
+                            width={600}
+                            alt="about-image"
+                        />
                     </article>
                 </section>
-                <section>
-                    <h2>You might be interested in:</h2>
-                    <RecipesList recipes={recipes} />
-                </section>
+                {/* <RecipesList recipes={recipes} /> */}
             </Wrapper>
         </Layout>
     );
