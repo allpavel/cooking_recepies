@@ -11,26 +11,6 @@ const Wrapper = styled.main`
     flex-direction: column;
     flex: 1 0 auto;
 
-    .flex-container {
-        display: flex;
-    }
-
-    .text-container {
-        width: 50%;
-        padding: 5rem 2rem 5rem 9rem;
-        font-size: 1.2rem;
-    }
-
-    .text-container h2 {
-        margin: 0;
-    }
-
-    .image-container {
-        width: 50%;
-        margin: 3rem 0;
-        padding: 2rem 3rem;
-    }
-
     @media screen and (max-width: 1200px) {
         .text-container {
             padding: 3rem;
@@ -54,6 +34,26 @@ const Wrapper = styled.main`
             padding: 1rem;
         }
     }
+`;
+
+const AboutContainer = styled.section`
+    display: flex;
+`;
+
+const Text = styled.article`
+    width: 50%;
+    padding: 5rem 2rem 5rem 9rem;
+    font-size: 1.2rem;
+
+    h2 {
+        margin: 0;
+    }
+`;
+
+const Image = styled.article`
+    width: 50%;
+    margin: 3rem 0;
+    padding: 2rem 3rem;
 `;
 
 const query = graphql`
@@ -83,8 +83,8 @@ const About = () => {
         <Layout>
             <Seo title={'About'} />
             <Wrapper>
-                <section className="flex-container">
-                    <article className="text-container">
+                <AboutContainer>
+                    <Text>
                         <h2>About Us</h2>
                         <p>
                             Cooking Recipes is here to help you cook delicious meals with less stress and more joy. We
@@ -98,17 +98,18 @@ const About = () => {
                             of fruits and vegetables, and protein from meat, fish, beans, and cheese. Plus cake for
                             dessert.
                         </p>
-                    </article>
-                    <article className="image-container">
+                    </Text>
+                    <Image>
                         <StaticImage
                             src="../assets/images/about.jpg"
                             placeholder="blurred"
                             width={600}
                             alt="about-image"
                         />
-                    </article>
-                </section>
-                {/* <RecipesList recipes={recipes} /> */}
+                    </Image>
+                </AboutContainer>
+                <h2>You might be interested in:</h2>
+                <RecipesList recipes={recipes} />
             </Wrapper>
         </Layout>
     );
