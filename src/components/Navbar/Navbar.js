@@ -4,9 +4,9 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 
 export default function Navbar() {
     return (
-        <>
+        <div>
             <DestopMenu />
             <MobileMenu />
-        </>
+        </div>
     );
 }

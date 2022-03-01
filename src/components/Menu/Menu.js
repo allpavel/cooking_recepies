@@ -21,6 +21,11 @@ const NavbarItem = styled(Link)`
         background-color: var(--navbar-and-footer-color-hover);
         border-bottom: 3px solid var(--font-color-main);
     }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 `;
 
 const Menu = () => {
