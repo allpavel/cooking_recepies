@@ -11,49 +11,35 @@ const Wrapper = styled.main`
     flex-direction: column;
     flex: 1 0 auto;
 
-    @media screen and (max-width: 1200px) {
-        .text-container {
-            padding: 3rem;
-            font-size: 1rem;
-        }
-
-        .image-container {
-            padding: 3rem 1rem;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-
-        .image-container {
-            padding-top: 0;
-            margin: 0 auto;
-        }
-
-        .text-container {
-            padding: 1rem;
-        }
+    h2 {
+        margin-left: 2rem;
     }
 `;
 
 const AboutContainer = styled.section`
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 `;
 
 const Text = styled.article`
-    width: 50%;
-    padding: 5rem 2rem 5rem 9rem;
+    margin: 3rem 3rem;
     font-size: 1.2rem;
 
     h2 {
         margin: 0;
     }
+
+    @media screen and (max-width: 815px) {
+        margin: 0 2rem;
+    }
 `;
 
 const Image = styled.article`
-    width: 50%;
-    margin: 3rem 0;
-    padding: 2rem 3rem;
+    margin: 3rem 2rem;
+
+    @media screen and (max-width: 815px) {
+        margin: 0 auto;
+    }
 `;
 
 const query = graphql`

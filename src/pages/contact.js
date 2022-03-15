@@ -7,36 +7,40 @@ import Seo from '../components/SEO/SEO';
 const Wrapper = styled.main`
     display: flex;
     flex: 1 0 auto;
+`;
 
-    .text-container {
-        padding: 5rem 2rem 5rem 9rem;
-        width: 50%;
-    }
+const TextContainer = styled.article`
+    padding: 5rem 2rem 5rem 9rem;
+    width: 50%;
 
     h3 {
         margin-top: 0;
     }
+`;
 
-    .form-container {
-        height: 50%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        padding: 2rem 3rem;
-        border-left: 5px solid var(--navbar-and-footer-color-main);
-        max-width: 100%;
+const FormContainer = styled.article`
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem;
+    border-left: 5px solid var(--navbar-and-footer-color-main);
+    max-width: 100%;
+
+    h3 {
+        margin-top: 0;
     }
+`;
 
-    .inputbox {
-        position: relative;
-        height: 3rem;
-        min-width: 250px;
-        margin-bottom: 2rem;
-    }
+const Inputbox = styled.div`
+    position: relative;
+    height: 3rem;
+    min-width: 250px;
+    margin-bottom: 2rem;
 
-    .inputbox input {
+    input {
         width: 80%;
         min-width: 200px;
         height: 100%;
@@ -49,7 +53,7 @@ const Wrapper = styled.main`
         padding: 0.5rem;
     }
 
-    .inputbox label {
+    label {
         position: absolute;
         top: 14px;
         left: 20px;
@@ -59,19 +63,19 @@ const Wrapper = styled.main`
         transition: all 0.6s ease-in;
     }
 
-    .inputbox input:hover,
-    .inputbox input:focus {
+    input:hover,
+    input:focus {
         border: 3px solid var(--navbar-and-footer-color-hover);
     }
 
-    .inputbox input:focus ~ label,
-    .inputbox input:valid ~ label {
-        transform: translateX(-13px) translateY(-20px);
+    input:focus ~ label,
+    input:valid ~ label {
+        transform: translateX(-13px) translateY(-22px);
         font-size: 0.8rem;
         background-color: white;
     }
 
-    .inputbox textarea {
+    textarea {
         outline: none;
         resize: none;
         width: 80%;
@@ -80,7 +84,7 @@ const Wrapper = styled.main`
         border: 3px solid var(--navbar-and-footer-color-main);
     }
 
-    .inputbox textarea + label {
+    textarea + label {
         position: absolute;
         font-size: 0.8rem;
         background: white;
@@ -88,8 +92,8 @@ const Wrapper = styled.main`
         left: 10px;
     }
 
-    .inputbox textarea:focus,
-    .inputbox textarea:hover {
+    textarea:focus,
+    textarea:hover {
         border: 3px solid var(--navbar-and-footer-color-hover);
     }
 `;
@@ -126,45 +130,35 @@ export default function Contact() {
 
     return (
         <Layout>
-            <Seo title={"Contact"} />
+            <Seo title={'Contact'} />
             <Wrapper>
-                <article className="text-container">
+                <TextContainer>
                     <h3>Want To Get In Touch</h3>
                     <p>
-                        Likeness form. Stars to fruitful image, fruit doesn't
-                        blessed sixth air isn't to it he from meat third over
-                        Make greater given, blessed. Light. Greater replenish
-                        rule, good. Itself be. Gathered shall thing after
-                        whales.
+                        Likeness form. Stars to fruitful image, fruit doesn't blessed sixth air isn't to it he from meat
+                        third over Make greater given, blessed. Light. Greater replenish rule, good. Itself be. Gathered
+                        shall thing after whales.
                     </p>
                     <p>
-                        Greater may tree above man them you fish days likeness
-                        good. Good forth, great him for replenish fourth, moved
-                        earth. Meat gathering. Great there meat, meat every set.
-                        Dominion that grass days creeping created green, fish
-                        under after darkness appear, herb were. Multiply fill
-                        don't you'll seed divided one forth heaven open herb
-                        divided. Fowl saying dominion that all a. Were can't
-                        unto. Heaven, seed. Won't a saw winged signs. That fruit
-                        morning them seed without subdue under fly all fish, set
-                        to.
+                        Greater may tree above man them you fish days likeness good. Good forth, great him for replenish
+                        fourth, moved earth. Meat gathering. Great there meat, meat every set. Dominion that grass days
+                        creeping created green, fish under after darkness appear, herb were. Multiply fill don't you'll
+                        seed divided one forth heaven open herb divided. Fowl saying dominion that all a. Were can't
+                        unto. Heaven, seed. Won't a saw winged signs. That fruit morning them seed without subdue under
+                        fly all fish, set to.
                     </p>
                     <p>
-                        Replenish don't every third set. He saying forth fourth,
-                        from likeness shall. Brought i Forth seas. Fourth their
-                        upon also, fowl. So male. Face lesser second beginning
-                        open, seas have night that winged. Give hath bring
-                        lights him after god given without meat. Sixth midst of
-                        there man firmament seas creepeth waters give earth
-                        can't very, set, him above subdue. Fly second cattle
-                        can't unto very were. Make deep said god saw first he
-                        open from seed that us were. For she'd.
+                        Replenish don't every third set. He saying forth fourth, from likeness shall. Brought i Forth
+                        seas. Fourth their upon also, fowl. So male. Face lesser second beginning open, seas have night
+                        that winged. Give hath bring lights him after god given without meat. Sixth midst of there man
+                        firmament seas creepeth waters give earth can't very, set, him above subdue. Fly second cattle
+                        can't unto very were. Make deep said god saw first he open from seed that us were. For she'd.
                     </p>
-                </article>
-                <article className="form-container">
+                </TextContainer>
+                <FormContainer>
                     <h3>Contact Form</h3>
                     <form>
-                        <div className="inputbox">
+                        <Inputbox>
                             <input
                                 id="name"
                                 type="text"
@@ -174,8 +168,8 @@ export default function Contact() {
                                 onChange={handleNameChange}
                             />
                             <label htmlFor="name">Your Name</label>
-                        </div>
-                        <div className="inputbox">
+                        </Inputbox>
+                        <Inputbox>
                             <input
                                 id="email"
                                 type="text"
@@ -185,24 +179,14 @@ export default function Contact() {
                                 onChange={handleEmailChange}
                             />
                             <label htmlFor="email">Your Email</label>
-                        </div>
-                        <div className="inputbox">
-                            <textarea
-                                id="message"
-                                rows={3}
-                                value={message}
-                                onChange={handeMessageChange}
-                            />
+                        </Inputbox>
+                        <Inputbox>
+                            <textarea id="message" rows={3} value={message} onChange={handeMessageChange} />
                             <label htmlFor="message">Your Message</label>
-                        </div>
-                        <Button
-                            type={'submit'}
-                            title={'Submit'}
-                            onClick={handleSubmit}
-                            styles={'smallButton'}
-                        />
+                        </Inputbox>
+                        <Button type={'submit'} title={'Submit'} onClick={handleSubmit} styles={'smallButton'} />
                     </form>
-                </article>
+                </FormContainer>
             </Wrapper>
         </Layout>
     );
