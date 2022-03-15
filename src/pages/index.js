@@ -14,8 +14,10 @@ const Wrapper = styled.main`
     section {
         display: flex;
     }
+`;
 
-    .tags a {
+const Tags = styled.div`
+    a {
         height: 2rem;
         width: 10rem;
         display: flex;
@@ -26,21 +28,21 @@ const Wrapper = styled.main`
         margin: 1rem;
     }
 
-    .tags p {
+    p {
         margin: 0 0.2rem 0;
     }
 
-    .tags a:hover {
+    a:hover {
         background-color: var(--navbar-and-footer-color-hover);
         border: 2px solid var(--active-menu-color);
     }
 
-    .tags a:active {
+    a:active {
         background-color: var(--active-menu-color);
         color: var(--font-color-hover);
     }
 
-    .tags a:visited {
+    a:visited {
         color: inherit;
     }
 `;
@@ -75,9 +77,9 @@ export default function Home() {
                 <HeroImage />
                 <h2>You might be interested in:</h2>
                 <section>
-                    <div className="tags">
+                    <Tags>
                         <TagsList recipes={recipes} />
-                    </div>
+                    </Tags>
                     <RecipesList recipes={recipes} />
                 </section>
             </Wrapper>
