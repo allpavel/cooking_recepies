@@ -15,12 +15,17 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
 
     img {
-        width: 20vw;
+        width: 400px;
         height: auto;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            height: auto;
+    }
     }
 `;
 

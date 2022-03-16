@@ -3,12 +3,20 @@ import styled from 'styled-components';
 import { timeTransform } from '../../utils/timeTransform';
 
 const Wrapper = styled.section`
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     border-top: 2px solid var(--font-color-main);
     border-bottom: 2px solid var(--font-color-main);
     width: 100%;
     margin: 2rem 0;
+
+    @media screen and (max-width: 815px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     article {
         display: flex;
@@ -29,21 +37,21 @@ const Wrapper = styled.section`
 
 const RecipeDetails = ({ servings, prepTime, cookingTime }) => {
     return (
-        <Wrapper aria-label='Recipe details'>
-            <article aria-labelledby='servings'>
-                <h2 id='servings'>Servings:</h2>
+        <Wrapper aria-label="Recipe details">
+            <article aria-labelledby="servings">
+                <h2 id="servings">Servings:</h2>
                 <span>{servings}</span>
             </article>
-            <article aria-labelledby='prepTime'>
-                <h2 id='prepTime'>Prep Time:</h2>
+            <article aria-labelledby="prepTime">
+                <h2 id="prepTime">Prep Time:</h2>
                 <span>{timeTransform(prepTime)}</span>
             </article>
-            <article aria-labelledby='cookTime'>
-                <h2 id='cookTime'>Cook Time:</h2>
+            <article aria-labelledby="cookTime">
+                <h2 id="cookTime">Cook Time:</h2>
                 <span>{timeTransform(cookingTime)}</span>
             </article>
-            <article aria-labelledby='totalTime'>
-                <h2 id='totalTime'>Total time:</h2>
+            <article aria-labelledby="totalTime">
+                <h2 id="totalTime">Total time:</h2>
                 <span>{timeTransform(prepTime + cookingTime)}</span>
             </article>
         </Wrapper>

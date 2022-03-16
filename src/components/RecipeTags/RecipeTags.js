@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 1rem;
     justify-content: space-evenly;
@@ -34,6 +35,12 @@ const Wrapper = styled.section`
     a:active {
         background-color: var(--active-menu-color);
         color: var(--font-color-hover);
+    }
+
+    @media screen and (max-width: 600px) {
+        a {
+            margin: 1rem 1rem;
+        }
     }
 `;
 

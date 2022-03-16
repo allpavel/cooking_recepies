@@ -6,9 +6,8 @@ import Menu from '../Menu/Menu';
 import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 const Wrapper = styled.div`
-position: relative;
+    position: relative;
     display: none;
-    
 
     @media screen and (max-width: 800px) {
         display: flex;
@@ -18,13 +17,13 @@ position: relative;
 `;
 
 const Content = styled.div`
-        @media screen and (max-width: 800px) {
-            position: absolute;
-            width: 100vw;
-            background-color: rgba(247, 247, 247, 0.8);
-            top: 2rem;
-            right: 0;
-            z-index: 100;
+    @media screen and (max-width: 800px) {
+        position: absolute;
+        width: 100vw;
+        background-color: rgba(247, 247, 247, 1);
+        top: 2rem;
+        right: 0;
+        z-index: 100;
     }
 `;
 
@@ -41,12 +40,19 @@ const MobileMenu = () => {
         <Wrapper ref={node}>
             <IconContext.Provider value={{ size: '2rem', title: 'Menu', style: { float: 'right', cursor: 'pointer' } }}>
                 <div>
-                    {isClicked ? <AiOutlineCloseCircle onClick={handleClick} /> : <AiOutlineMenuFold onClick={handleClick} />}
+                    {isClicked ? (
+                        <AiOutlineCloseCircle onClick={handleClick} />
+                    ) : (
+                        <AiOutlineMenuFold onClick={handleClick} />
+                    )}
                 </div>
             </IconContext.Provider>
-            
-            {isClicked && <Content><Menu /></Content>}
-            
+
+            {isClicked && (
+                <Content>
+                    <Menu />
+                </Content>
+            )}
         </Wrapper>
     );
 };
