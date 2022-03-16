@@ -5,22 +5,23 @@ import Layout from '../components/Layout/Layout';
 import Seo from '../components/SEO/SEO';
 
 const Wrapper = styled.main`
-    display: flex;
-    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 `;
 
 const TextContainer = styled.article`
-    padding: 5rem 2rem 5rem 9rem;
-    width: 50%;
-
+    margin: 3rem auto;
+    padding: 2rem 3rem;
     h3 {
         margin-top: 0;
+    }
+
+    @media screen and (max-width: 815px) {
+        margin: 0 auto;
     }
 `;
 
 const FormContainer = styled.article`
-    height: 50%;
-    width: 50%;
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
@@ -30,6 +31,10 @@ const FormContainer = styled.article`
     max-width: 100%;
 
     h3 {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 815px) {
         margin-top: 0;
     }
 `;

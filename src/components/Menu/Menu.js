@@ -25,6 +25,7 @@ const NavbarItem = styled(Link)`
     @media screen and (max-width: 800px) {
         width: 100%;
         margin: 0 auto;
+        height: 5rem;
     }
 `;
 
